@@ -1,0 +1,6 @@
+dataset
+.venv
+project_env
+*.jpg
+*.jepg
+*.png

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static  "CSS/style.css" %}">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        let selectedMethod = 'eye'; // Default method
+
+        function chooseMethod(method) {
+            selectedMethod = method;
+            document.querySelectorAll('.method-options button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            document.getElementById(method + 'Btn').classList.add('selected');
+            document.getElementById("type").value =method;
+            
+        }
+
+        function classifyImage() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (file) {
+                const fileType = document.getElementById('type').value;
+                
+                if (fileType) {
+                    var formData = new FormData($("#ScreenForm")[0]);
+
+                    $.ajax({
+                        method: "post",
+                        contentType: false,
+                        processData: false,
+                        data: formData,
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader(
+                            "X-CSRFToken",
+                            $("input[name=csrfmiddlewaretoken]").val()
+                            );
+                        },
+                    
+                        success: function (data) {
+
+                            if (data.status == "1") {
+                                Swal.fire({
+                                    title: data.msg,
+                                    text: "",
+                                    icon: "success"
+                                  });
+                                  
+                                
+                            
+                            }
+                            else {
+                                alert(data.msg);
+                            }
+                            
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(error);
+                        },
+                    });
+                
+                    } 
+                else {
+                        alert('Please select an Eye of Face.');
+                    }
+                } else {
+                    alert('Please select an image.');
+                }
+        }
+
+        function displayClassificationResult(result) {
+            document.getElementById('classificationResult').innerText = result;
+            document.getElementById('resultPopup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('resultPopup').style.display = 'none';
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="box">
+            <h2>Let's check the </h2>
+            <div class="method-options">
+                <button id="eyeBtn" onclick="chooseMethod('eye')">Eye</button>
+                <button id="faceBtn" onclick="chooseMethod('face')">Face</button>
+            </div>
+            <h3>Choose the image </h3>
+            <form method="post" id="ScreenForm" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <input type="hidden" id="type" name="type">
+                <input type="file" name="image" id="fileInput" accept="image/*">
+                <button type="button" onclick="classifyImage()">Classify Image</button>
+                
+
+            </form>
+            <div id="imagePreview" class="image-preview"></div>
+        </div>
+    </div>
+
+    <div id="resultPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Classification Result</h2>
+            <p id="classificationResult"></p>
+        </div>
+    </div>
+</body>
+</html>
