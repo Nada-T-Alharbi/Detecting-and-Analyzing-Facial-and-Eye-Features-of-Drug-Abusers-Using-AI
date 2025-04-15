@@ -41,24 +41,15 @@ Sources include FERET and various research datasets. Images were preprocessed us
 
 YOLOv8-cls showed the highest accuracy and was chosen as the primary model.
 
-## 🖥️ How to Run
 
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-pip install -r requirements.txt
-python manage.py runserver
-```
-
-> Note: Requires Python 3.x, Django, and relevant packages in `requirements.txt`.
 
 ## 🧑‍💻 Team Members
 
-- Sara Mansoor Aljuhani – 4050562
-- Nada Thiab Alharbi – 4250814
-- Ruba Talal Alharbi – 4050081
-- Raud Mohammed Alsehli – 4052970
-- Areej Farhan Alsahli – 4054826
+- Sara Mansoor Aljuhani 
+- Nada Thiab Alharbi
+- Ruba Talal Alharbi 
+- Raud Mohammed Alsehli 
+- Areej Farhan Alsahli
 
 ## 📍 University & Supervision
 
