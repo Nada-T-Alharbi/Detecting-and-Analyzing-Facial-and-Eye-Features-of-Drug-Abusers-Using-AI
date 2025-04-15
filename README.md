@@ -51,7 +51,7 @@ YOLOv8-cls showed the highest accuracy and was chosen as the primary model.
 - Raud Mohammed Alsehli 
 - Areej Farhan Alsahli
 
-## 📍 University & Supervision
+## 📍 University
 
 **Taibah University** – College of Computer Science and Engineering
 
