@@ -45,11 +45,11 @@ YOLOv8-cls showed the highest accuracy and was chosen as the primary model.
 
 ## 🧑‍💻 Team Members
 
-- [Sara Mansoor Aljuhani](https://github.com/sara-aljuhani) 
-- [Nada Thiab Alharbi](https://github.com/Nada-T-Alharbi)
-- [Ruba Talal Alharbi](https://github.com/Rubabdran)
-- Raud Mohammed Alsehli
-- Areej Farhan Alsahli
+- [Sara Aljuhani](https://github.com/sara-aljuhani) 
+- [Nada Alharbi](https://github.com/Nada-T-Alharbi)
+- [Ruba Alharbi](https://github.com/Rubabdran)
+- Raud Alsehli
+- Areej Alsahli
 
 ## 📍 University
 
