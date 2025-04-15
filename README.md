@@ -53,13 +53,11 @@ YOLOv8-cls showed the highest accuracy and was chosen as the primary model.
 
 ## 📍 University & Supervision
 
-**Taibah University** – College of Computer Science and Engineering  
-Supervised by Dr. Ayman Ibrahim Hamza Noor  
-In collaboration with Dr. Tawfeeq Reda Alsanoosy
+**Taibah University** – College of Computer Science and Engineering
 
 ## 📅 Academic Year
 
-Second Semester – 1445H / 2023-2024
+Second Semester 2023-2024
 
 ## 🔮 Future Work
 
