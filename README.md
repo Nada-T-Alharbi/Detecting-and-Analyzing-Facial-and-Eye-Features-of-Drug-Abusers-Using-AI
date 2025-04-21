@@ -13,16 +13,6 @@ Traditional methods of detecting drug abuse such as blood tests are time-consumi
 - Deliver a web-based solution for use in health and security sectors.
 - Achieve high accuracy while minimizing cost and processing time.
 
-## 🧪 Technologies Used
-
-- Python
-- TensorFlow & Keras
-- Scikit-learn
-- OpenCV
-- YOLOv8-cls
-- Django
-- HTML / CSS / JavaScript
-
 ## 🗂 Dataset
 
 Custom-built dataset consisting of:
